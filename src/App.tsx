@@ -8,11 +8,11 @@ function App() {
 
   return (
     <>
-      <BrowserRouter basename="https://kallesh-b-s.github.io/mern-fe/">
+      <BrowserRouter>
         <Routes>
-          <Route path="/" element={<LandingPage />} />
-          <Route path="/login" element={<Login />} />
-          <Route path="/register" element={<Register />} />
+          <Route path="/mern-fe/" element={<LandingPage />} />
+          <Route path="/mern-fe/login" element={<Login />} />
+          <Route path="/mern-fe/register" element={<Register />} />
         </Routes>
       </BrowserRouter>
     </>
