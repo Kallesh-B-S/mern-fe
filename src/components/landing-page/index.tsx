@@ -7,10 +7,10 @@ const LandingPage = () => {
             <div className="w-[100vw] landinglass flex items-center justify-center bg-slate-700">
                 <div className="flex gap-5 p-5 box-border min-w-1 select-none">
                     <div className="max-w-[4rem] p-2 box-border border border-solid border-green-500 text-green-500 font-bold active:text-black active:bg-green-500 ">
-                        <Link to={"/login"} className="" >Login</Link>
+                        <Link to={"/mern-fe/login"} className="" >Login</Link>
                     </div>
                     <div className="max-w-[5rem] p-2 box-border border border-solid border-yellow-500 text-yellow-500 font-bold active:text-black active:bg-yellow-500">
-                        <Link to={"/register"} className="" >Register</Link>
+                        <Link to={"/mern-fe/register"} className="" >Register</Link>
                     </div>
                 </div>
             </div>
