@@ -1,5 +1,6 @@
 {
   "name": "client",
+  "homepage":"https://Kallesh-B-S.github.io/mern-fe",
   "private": true,
   "version": "0.0.0",
   "type": "module",
