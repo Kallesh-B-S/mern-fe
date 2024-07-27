@@ -1,8 +1,46 @@
 import { Link } from "react-router-dom";
+import Header from "../headers/Header";
+import { useEffect, useState } from "react";
+import { useTranslation } from "react-i18next";
+import { CustomHourlyGreetings } from "./landingPageTypes";
 
 const LandingPage = () => {
+    const [greetings, setGreetings] = useState<number>(1);
+    const { t } = useTranslation();
+    // const [greetings, setGreetings] = useState(new Date().getHours());
+    // useEffect(() => {
+    //     setInterval(() => {
+    //         setGreetings(new Date().getHours())
+    //     }, 1000);
+    // });
+
+    // useEffect(() => {
+    //     let flag;
+    //     if (flag) {
+    //         clearInterval(flag);
+    //     }
+    //     flag = setInterval(() => {
+    //         setGreetings(Math.floor(Math.random() * 24) + 1)
+    //     }, 5000);
+    // });
+
+    // useEffect(() => {
+    //     const timeoutId = setTimeout(() => {
+    //         setGreetings(Math.floor(Math.random() * 24) + 1)
+    //         console.log(greetings);
+    //     }, 2000);
+    //     return () => {
+    //         clearTimeout(timeoutId);
+    //     };
+    // });
+
     return (
         <>
+            <Header />
+            <div className="bg-slate-600 h-[40vh] flex items-center justify-center font-mono text-4xl ">{t(CustomHourlyGreetings.hello)}, &nbsp;
+                {greetings < 12 ? t(CustomHourlyGreetings.GoodMorning) : greetings >= 12 && greetings < 16 ? t(CustomHourlyGreetings.GoodAfternoon) :
+                    greetings >= 16 && greetings < 19 ? t(CustomHourlyGreetings.GoodEvening) : t(CustomHourlyGreetings.GoodNight)} {t(CustomHourlyGreetings.welcome)}.
+            </div>
 
             <div className="w-[100vw] landinglass flex items-center justify-center bg-slate-700">
                 <div className="flex gap-5 p-5 box-border min-w-1 select-none">
@@ -15,7 +53,7 @@ const LandingPage = () => {
                 </div>
             </div>
             <div className="text-center p-1 bg-slate-500">
-                <h1>Welcome to Super App</h1>
+                <h1>Super App</h1>
             </div>
         </>
 

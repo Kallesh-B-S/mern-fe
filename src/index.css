@@ -11,5 +11,5 @@
 }
 
 .landinglass {
-    height: calc(100vh - 32px);
+    height: calc(100vh - (40px + 292px + 32px));
 }
